@@ -1,0 +1,16 @@
+{
+    "trailingComma": "all",
+    "printWidth": 180,
+    "tabWidth": 4,
+    "vueIndentScriptAndStyle": false,
+    "semi": true,
+    "singleQuote": false,
+    "overrides": [
+        {
+            "files": ".prettierrc",
+            "options": {
+                "parser": "json"
+            }
+        }
+    ]
+}
