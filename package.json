@@ -9,7 +9,11 @@
         "preview": "vite preview",
         "lint": "eslint . --ext .vue,.ts,.js,.jsx,.mjs --fix --ignore-path .gitignore",
         "prettier": "prettier --write .",
-        "style": "stylelint 'src/**/*.(css|scss)' --fix"
+        "style": "stylelint 'src/**/*.(css|scss)' --fix",
+        "prepare": "husky install"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
     },
     "dependencies": {
         "ant-design-vue": "^3.2.15",
@@ -21,6 +25,8 @@
         "vue-router": "4"
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.3.0",
+        "@commitlint/config-conventional": "^17.3.0",
         "@typescript-eslint/eslint-plugin": "^5.44.0",
         "@typescript-eslint/parser": "^5.44.0",
         "@vitejs/plugin-vue": "^3.2.0",

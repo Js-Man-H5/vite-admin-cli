@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-11-23 14:35:45
- * @LastEditTime: 2022-11-23 19:51:06
+ * @LastEditTime: 2022-11-25 14:21:26
  * @Description:
  */
 
@@ -12,9 +12,7 @@ module.exports = {
     node: true,
     "vue/setup-compiler-macros": true,
   },
-
   parser: "vue-eslint-parser",
-  // vue-eslint-parser "@typescript-eslint/parser"
   extends: ["eslint:recommended", "plugin:vue/vue3-essential",
     "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "./.eslintrc-auto-import.json"],
   overrides: [],
