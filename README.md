@@ -1,3 +1,9 @@
+<!--
+ * @Author: jack.hai
+ * @Date: 2022-11-22 10:22:48
+ * @LastEditTime: 2022-11-26 21:12:24
+ * @Description: 
+-->
 # Vue 3 + TypeScript + Vite
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
@@ -10,7 +16,32 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+## vsCode安装插件
+
+esLint、styleLint
+
+## 安装依赖
+
+yarn
+
+
+## 安装husky
+
+yarn prepare
+
+## eslint不生效？
+
+yarn lint
+
+## 项目启动
+
+yarn dev
+
+## 组件格式
+    └── 组件名称 xxxx
+        ├── components ---子组件
+        ├── hooks ---hooks
+        ├── index.vue ---默认都为index
+        ├── style.scss ---样式文件
+        └── type.ts ---ts类型文件

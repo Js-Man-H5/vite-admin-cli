@@ -3,13 +3,15 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export { }
+export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
+    DownOutlined: typeof import('@ant-design/icons-vue')['DownOutlined']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UpCircleOutlined: typeof import('@ant-design/icons-vue')['UpCircleOutlined']
   }
 }

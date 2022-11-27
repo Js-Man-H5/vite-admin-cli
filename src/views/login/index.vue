@@ -1,18 +1,28 @@
 <!--
  * @Author: jack.hai
  * @Date: 2022-11-23 14:45:58
- * @LastEditTime: 2022-11-25 13:55:21
+ * @LastEditTime: 2022-11-27 18:49:16
  * @Description:
 -->
 <template>
     <div>
         11111
-        {{ data }}{{ user.name }}
+        <div class="test">{{ data }}{{ user.name }}</div>
         <a-button type="primary">Primary Button</a-button>
+        <a-button type="primary">Primary Button</a-button>
+
+        <DownOutlined />
+        <up-circle-outlined />
         <HelloWorld msg="1"></HelloWorld>
+        {{ name }}{{ userInfo }}
     </div>
 </template>
 <script setup lang="ts">
+const { name } = testHook();
+const { userInfo } = userInfoHook();
 const { user } = store();
 const data = ref(1);
 </script>
+<style scoped lang="scss">
+@import "./style.scss";
+</style>
