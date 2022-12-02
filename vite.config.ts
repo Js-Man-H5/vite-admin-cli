@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-11-22 10:22:48
- * @LastEditTime: 2022-11-27 19:04:44
+ * @LastEditTime: 2022-11-27 21:58:17
  * @Description:
  */
 import { defineConfig, loadEnv } from "vite";
