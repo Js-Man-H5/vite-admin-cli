@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-11-23 14:35:45
- * @LastEditTime: 2022-11-27 19:13:58
+ * @LastEditTime: 2023-04-19 15:51:57
  * @Description:
  */
 
@@ -20,19 +20,45 @@ module.exports = {
     "plugin:prettier/recommended",
     "./.eslintrc-auto-import.json"],
   overrides: [],
-
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
     parser: '@typescript-eslint/parser',
   },
   plugins: ["vue", "@typescript-eslint"],
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        // Choose from one of the "project" configs below or omit to use <root>/tsconfig.json by default
+        // use <root>/path/to/folder/tsconfig.json
+        "project": "path/to/folder",
+        // Multiple tsconfigs (Useful for monorepos)
+        // use a glob pattern
+        "project": "packages/*/tsconfig.json",
+
+        // use an array
+        "project": [
+          "packages/module-a/tsconfig.json",
+          "packages/module-b/tsconfig.json"
+        ],
+
+        // use an array of glob patterns
+        "project": [
+          "packages/*/tsconfig.json",
+          "other-packages/*/tsconfig.json"
+        ]
+      }
+    }
+  },
   rules: {
-    "no-extra-parens": "error",
     "no-multi-spaces": "error",
     "no-self-compare": "error",
     "no-useless-concat": "error",
-    "indent": ["error", 4],
+    "@typescript-eslint/indent": ["error", 4, { "SwitchCase": 1 }],
     "key-spacing": "error",
     "vue/multi-word-component-names": "off",
     "no-multiple-empty-lines": "error", // 限制最多出现两个空行

@@ -6,7 +6,7 @@
         "allowSyntheticDefaultImports": true,
     },
     "include": [
+        "src/workers/worker.ts",
         "vite.config.ts",
-        "src/utils/sentry"
     ],
 }

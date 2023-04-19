@@ -1,7 +1,7 @@
 <!--
  * @Author: jack.hai
  * @Date: 2022-11-23 14:45:58
- * @LastEditTime: 2022-11-27 18:49:16
+ * @LastEditTime: 2023-04-19 16:31:10
  * @Description:
 -->
 <template>
@@ -11,8 +11,8 @@
         <a-button type="primary">Primary Button</a-button>
         <a-button type="primary">Primary Button</a-button>
 
-        <DownOutlined />
-        <up-circle-outlined />
+        <step-backward-outlined />
+
         <HelloWorld msg="1"></HelloWorld>
         {{ name }}{{ userInfo }}
     </div>
