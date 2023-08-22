@@ -1,7 +1,7 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-11-22 10:22:48
- * @LastEditTime: 2023-04-19 16:30:39
+ * @LastEditTime: 2023-08-22 14:16:57
  * @Description:
  */
 import { defineConfig, loadEnv } from "vite";
@@ -52,26 +52,11 @@ export default defineConfig(({ mode }) => {
         },
         optimizeDeps: {
             include: [
-                "ant-design-vue/es/date-picker/style",
-                "ant-design-vue/es/form/style",
-                "ant-design-vue/es/upload/style",
-                "ant-design-vue/es/modal/style",
-                "ant-design-vue/es/radio/style",
-                "ant-design-vue/es/input/style",
-                "ant-design-vue/es/image/style",
-                "ant-design-vue/es/card/style",
-                "ant-design-vue/es/button/style",
-                "ant-design-vue/es/table/style",
-                "ant-design-vue/es/tooltip/style",
-                "ant-design-vue/es/select/style",
-                "ant-design-vue/es/popconfirm/style",
-                "ant-design-vue/es/divider/style",
-                "ant-design-vue/es/tag/style",
-                "ant-design-vue/es/switch/style",
-                "ant-design-vue/es/empty/style",
-                "ant-design-vue/es/slider/style",
+                "ant-design-vue",
+                "ant-design-vue/es/style",
+                "ant-design-vue/es/locale/zh_CN",
+                "ant-design-vue/es/locale/en_US",
                 "lodash/throttle",
-                "ant-design-vue/es/tabs/style",
                 "echarts",
             ],
         },
