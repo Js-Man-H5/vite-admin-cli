@@ -1,13 +1,14 @@
 /*
  * @Author: jack.hai
  * @Date: 2022-11-22 10:22:48
- * @LastEditTime: 2023-08-22 14:16:57
+ * @LastEditTime: 2023-08-22 14:26:39
  * @Description:
  */
 import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
+import progress from "vite-plugin-progress";
 import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 import { resolve } from "path";
 import { getVersion } from "./src/workers/worker";
@@ -53,6 +54,7 @@ export default defineConfig(({ mode }) => {
         optimizeDeps: {
             include: [
                 "ant-design-vue",
+                "@ant-design/icons-vue",
                 "ant-design-vue/es/style",
                 "ant-design-vue/es/locale/zh_CN",
                 "ant-design-vue/es/locale/en_US",
@@ -62,6 +64,7 @@ export default defineConfig(({ mode }) => {
         },
         plugins: [
             vue(),
+            progress(),
             // vitePluginSentryCli({
             //     url: "https://ideas.ibaiqiu.com/",
             //     authToken: "bdfe0d50944b4a6bad981e6c7f79cd77e95ed0f3d65c44249b1fdc6533d55e2a",
